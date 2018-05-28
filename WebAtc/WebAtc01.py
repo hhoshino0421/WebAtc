@@ -27,7 +27,11 @@ with urllib.request.urlopen(url_str
 
     print("Code:" + str(res.getcode()))
     print("URL:" + res.geturl())
-    #print("Info:" + res.info())
+
+    infoObj = res.info()
+    print("content type:" + infoObj.get_content_type())
+    print("content charset :" + infoObj.get_content_charset())
+
     print("")
     print("")
 
